@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: 0;
+}
+
+.parallax-l {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax-l img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.parallax-cover {
+  background: #000000;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 2;
+}
+
+.parallax-l-0 {
+  -webkit-transform: translateZ(-300px) scale(4);
+  transform: translateZ(-300px) scale(4);
+  filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg);
+}
+
+.parallax-l-1 {
+  -webkit-transform: translateZ(-250px) scale(3.5);
+  transform: translateZ(-100px) scale(2.5);
+}
+
+.parallax-l-2 {
+  filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg);
+}
+
+/* Trevor Code */
+header {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 60vw;
+  height: 60vh;
+  background-color: #050211c3;
+  padding: 2rem;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+}
+
+label {
+  font-size: 2rem;
+}
+
+#outputBox {
+  background-color: #490765c1;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  height: 4rem;
+}
+
+input {
+  color: black;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 2rem 2rem 0 0;
+}
+
+h1 {
+  color: white;
+}
