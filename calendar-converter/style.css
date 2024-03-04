@@ -10,25 +10,16 @@
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin-left: 0;
+  inset: 0;
 }
 
 .parallax-l {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
 }
 
 .parallax-l img {
-  display: block;
   position: absolute;
-  bottom: 0;
   width: 100%;
   height: 100vh;
   object-fit: cover;
@@ -36,12 +27,9 @@
 
 .parallax-cover {
   background: #000000;
-  display: block;
   position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 2000px;
+  inset: 100% 0 0 0;
+  height: 2000px; /* To be changed to suit needs of page */
   z-index: 2;
 }
 
@@ -60,7 +48,7 @@
   filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg);
 }
 
-/* Trevor Code */
+/* Trevor Code - JS NOT WORKING (please fix Trevor idk JS :D)*/
 header {
   display: flex;
   justify-content: center;
