@@ -1,0 +1,49 @@
+/* Contains all parallax content */
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  inset: 0;
+}
+
+/* General class for parallax layers */
+.layer {
+  position: absolute;
+  inset: 0;
+}
+
+/* Images fit screen */
+.layer img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Main content is inside parallax-cover which slides over the parallax background */
+.parallax-cover {
+  background: #000000;
+  position: absolute;
+  inset: 100% 0 0 0;
+  height: 180%;
+  z-index: 2;
+  padding: 5%;
+}
+
+/* Specific classes for parallax layers */
+.zero {
+  -webkit-transform: translateZ(-300px) scale(4.2);
+  transform: translateZ(-300px) scale(4.2);
+  filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg);
+}
+
+.one {
+  -webkit-transform: translateZ(-250px) scale(2);
+  transform: translateZ(-100px) scale(2);
+}
+
+.two {
+  filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg);
+}

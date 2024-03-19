@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gregorian to Veridical Converter</title>
+    <link rel="stylesheet" href="../stylesheets/parallax.css" />
+    <link rel="stylesheet" href="../stylesheets/main.css" />
+    <link rel="stylesheet" href="../stylesheets/calendar.css" />
+    <!-- Images for parallax: https://assetstore.unity.com/packages/2d/textures-materials/dynamic-space-background-lite-104606 -->
+  </head>
+  <body>
+    <div class="parallax">
+      <header>
+        <form>
+          <h1>Gregorian to Veridical</h1>
+          <input id="inputDate" name="inputDate" type="date" />
+          <div id="outputBox" class="form-box"><p>Converted Date -</p></div>
+          <div id="currentDayBox" class="form-box"></div>
+        </form>
+      </header>
+
+      <div class="layer zero">
+        <img src="../img/background.png" alt="" />
+      </div>
+      <div class="layer one">
+        <img src="../img/small-stars.png" alt="" />
+      </div>
+      <div class="layer two">
+        <img src="../img/big-stars.png" alt="" />
+      </div>
+
+      <div class="parallax-cover">
+        <div class="cal-display">
+          <section class="calendar-column">
+            <div class="calendar-background">
+              <div class="Year-calendar">
+                <div class="months-calendar" id="Isonoe">
+                  <h3>Isonoe</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Nereid">
+                  <h3>Nereid</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Charon">
+                  <h3>Charon</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Umbriel">
+                  <h3>Umbriel</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Ersa">
+                  <h3>Ersa</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Skrymir">
+                  <h3>Skrymir</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Neso">
+                  <h3>Neso</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Calypso">
+                  <h3>Calypso</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Korai">
+                  <h3>Korai</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Narvi">
+                  <h3>Narvi</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Cordelia">
+                  <h3>Cordelia</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Alvaldi">
+                  <h3>Alvaldi</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class="months-calendar" id="Erinome">
+                  <h3>Erinome</h3>
+                  <ul class="day">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <aside class="info-column">
+            <section class="text-article">
+              <h2>Veridical Solar Calendar</h2>
+              <p>
+                The Veridical Solar Calendar (VSC) was created by two high school students
+                Luke Bushuk and Verne Wright in 2024 designed to improve upon the Gregorian
+                calendars flaws, by introducing 13 uniform months each having 28 days. An
+                extra "New Years Day" would be added as well as a "Leap Day" on leap years,
+                to steer the yearly drift back on course.
+              </p>
+            </section>
+            <section class="text-article">
+              <h2>Importance of VSC</h2>
+              <p>
+                The months of VSC are named after discovered moons in the Solar System.
+              </p>
+            </section>
+          </aside>
+        </div>
+
+        <section class="month-wrap">
+          <table>
+            <th>Pronunciation Guide</th>
+            <tr>
+              <td class="month-name">Isonoe</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Eye so-no</td>
+            </tr>
+            <tr>
+              <td class="month-name">Nereid</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Near e-id</td>
+            </tr>
+            <tr>
+              <td class="month-name">Charon</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Shar on</td>
+            </tr>
+            <tr>
+              <td class="month-name">Umbriel</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Um-brie el</td>
+            </tr>
+            <tr>
+              <td class="month-name">Ersa</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Ur sa</td>
+            </tr>
+            <tr>
+              <td class="month-name">Skrymir</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Skry mere</td>
+            </tr>
+            <tr>
+              <td class="month-name">Neso</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Nay so</td>
+            </tr>
+            <tr>
+              <td class="month-name">Calypso</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Cal ip so</td>
+            </tr>
+            <tr>
+              <td class="month-name">Korai</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Core-eye</td>
+            </tr>
+            <tr>
+              <td class="month-name">Narvi</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Nar ve</td>
+            </tr>
+            <tr>
+              <td class="month-name">Cordelia</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Core del e-ya</td>
+            </tr>
+            <tr>
+              <td class="month-name">Alvaldi</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Al val di</td>
+            </tr>
+            <tr>
+              <td class="month-name">Erinome</td>
+            </tr>
+            <tr>
+              <td class="pronounce">Air in-ome</td>
+            </tr>
+          </table>
+        </section>
+
+        <footer>
+          <ul>
+            <li>
+              <h3>Collaborators</h3>
+              <p>Original Python Converter | <a href="https://github.com/lbushuk" target="_blank">Luke Bushuk</a></p>
+              <p>Starry Parallax Background | <a href="https://github.com/GraceKnutson" target="_blank">Grace Knutson</a></p>
+              <p>Full Year Calendar Layout | <a href="https://github.com/AshleyBowley" target="_blank">Ashley Bowley</a></p>
+            </li>
+            <li>
+              <p>Parallax Background Images From <a href="https://assetstore.unity.com/packages/2d/textures-materials/dynamic-space-background-lite-104606" target="_blank">DinV Studio</a></p>
+            </li>
+            <li>
+              <p>&#169; 2024 <a href="https://github.com/TLCoffin" target="_blank">Trevor Coffin</a></p>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+
+    <script src="../scripts/app.js"></script>
+  </body>
+</html>

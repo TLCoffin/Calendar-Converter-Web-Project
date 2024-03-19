@@ -1,0 +1,43 @@
+.Year-calendar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Year-calendar li {
+  list-style: none;
+  padding: 4%;
+  width: calc(100% / 10);
+  box-shadow: 2px 2px #909090;
+  border: 1px solid #909090;
+  margin: 0.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.months-calendar ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.months-calendar {
+  margin: 1%;
+  max-width: 15rem;
+  width: 10rem;
+}
+
+#day {
+  display: flex;
+  flex-direction: row;
+}
+
+.Year-calendar h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
